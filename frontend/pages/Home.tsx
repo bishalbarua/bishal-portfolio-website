@@ -25,9 +25,9 @@ export default function Home() {
 
   const services = [
     {
-      icon: Monitor,
-      title: 'Website Development',
-      description: 'Leading cross-functional teams to deliver complex projects on time and under budget.'
+      icon: Server,
+      title: 'AI Marketing',
+      description: 'Leveraging AI tools and strategies to optimize marketing campaigns and ROI.'
     },
     {
       icon: Code,
@@ -35,9 +35,9 @@ export default function Home() {
       description: 'Creating comprehensive digital marketing strategies across multiple platforms.'
     },
     {
-      icon: Server,
-      title: 'AI Marketing',
-      description: 'Leveraging AI tools and strategies to optimize marketing campaigns and ROI.'
+      icon: Monitor,
+      title: 'Project Management',
+      description: 'Leading cross-functional teams to deliver complex projects on time and under budget.'
     }
   ];
 

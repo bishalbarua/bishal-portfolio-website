@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-slate-50 text-slate-900">
+      <div className="min-h-screen bg-slate-900 text-white dark">
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -17,10 +17,10 @@ export default function Navigation() {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
+    <nav className="bg-slate-800 shadow-sm border-b border-slate-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="text-xl font-bold text-slate-900 hover:text-blue-600 transition-colors">
+          <Link to="/" className="text-xl font-bold text-white hover:text-orange-400 transition-colors">
             Bishal Barua
           </Link>
 
@@ -32,8 +32,8 @@ export default function Navigation() {
                 to={item.path}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
                   isActive(item.path)
-                    ? 'text-blue-600 border-b-2 border-blue-600'
-                    : 'text-slate-700 hover:text-blue-600'
+                    ? 'text-orange-400 border-b-2 border-orange-400'
+                    : 'text-slate-300 hover:text-orange-400'
                 }`}
               >
                 {item.name}
@@ -48,6 +48,7 @@ export default function Navigation() {
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
+              className="text-white hover:text-orange-400 hover:bg-slate-700"
             >
               {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
@@ -56,7 +57,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-slate-200">
+          <div className="md:hidden py-4 border-t border-slate-700">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <Link
@@ -65,8 +66,8 @@ export default function Navigation() {
                   onClick={() => setIsOpen(false)}
                   className={`px-3 py-2 text-sm font-medium transition-colors ${
                     isActive(item.path)
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                      ? 'text-orange-400 bg-slate-700'
+                      : 'text-slate-300 hover:text-orange-400 hover:bg-slate-700'
                   }`}
                 >
                   {item.name}

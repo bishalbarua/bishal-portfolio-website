@@ -61,13 +61,13 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen py-12 px-4">
+    <div className="min-h-screen py-12 px-4 bg-slate-900">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">About Me</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">About Me</h1>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+            <p className="text-lg text-slate-300 leading-relaxed mb-8">
               AI-Driven Project and Digital Marketing Manager with extensive experience building, 
               maintaining, and running successful dev projects and marketing campaigns. Bringing forth 
               broad marketing knowledge, coupled with focused campaign experience. Adept at creating 
@@ -78,29 +78,29 @@ export default function About() {
 
         {/* Experience Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center">
-            <Calendar className="mr-3 h-8 w-8 text-blue-600" />
+          <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
+            <Calendar className="mr-3 h-8 w-8 text-orange-400" />
             Professional Experience
           </h2>
           
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-slate-800 border-slate-700">
                 <CardHeader>
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                     <div>
-                      <CardTitle className="text-xl text-slate-900">{exp.title}</CardTitle>
-                      <p className="text-lg text-blue-600 font-medium">{exp.company}</p>
-                      <div className="flex items-center gap-4 mt-2 text-slate-600">
+                      <CardTitle className="text-xl text-white">{exp.title}</CardTitle>
+                      <p className="text-lg text-orange-400 font-medium">{exp.company}</p>
+                      <div className="flex items-center gap-4 mt-2 text-slate-400">
                         <span className="flex items-center">
                           <MapPin className="mr-1 h-4 w-4" />
                           {exp.location}
                         </span>
-                        <Badge variant="secondary">{exp.type}</Badge>
+                        <Badge variant="secondary" className="bg-slate-700 text-slate-300">{exp.type}</Badge>
                       </div>
                     </div>
                     <div className="mt-4 lg:mt-0">
-                      <Badge variant="outline" className="text-sm">
+                      <Badge variant="outline" className="text-sm border-orange-400 text-orange-400">
                         {exp.period}
                       </Badge>
                     </div>
@@ -110,8 +110,8 @@ export default function About() {
                   <ul className="space-y-2">
                     {exp.achievements.map((achievement, i) => (
                       <li key={i} className="flex items-start">
-                        <TrendingUp className="mr-2 h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                        <span className="text-slate-700">{achievement}</span>
+                        <TrendingUp className="mr-2 h-4 w-4 text-orange-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-slate-300">{achievement}</span>
                       </li>
                     ))}
                   </ul>
@@ -123,21 +123,21 @@ export default function About() {
 
         {/* Skills Section */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8 flex items-center">
-            <Award className="mr-3 h-8 w-8 text-blue-600" />
+          <h2 className="text-3xl font-bold text-white mb-8 flex items-center">
+            <Award className="mr-3 h-8 w-8 text-orange-400" />
             Skills & Expertise
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {skills.map((skillGroup, index) => (
-              <Card key={index}>
+              <Card key={index} className="bg-slate-800 border-slate-700">
                 <CardHeader>
-                  <CardTitle className="text-lg">{skillGroup.category}</CardTitle>
+                  <CardTitle className="text-lg text-white">{skillGroup.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill, i) => (
-                      <Badge key={i} variant="secondary">
+                      <Badge key={i} variant="secondary" className="bg-slate-700 text-slate-300">
                         {skill}
                       </Badge>
                     ))}
@@ -147,14 +147,14 @@ export default function About() {
             ))}
           </div>
 
-          <Card>
+          <Card className="bg-slate-800 border-slate-700">
             <CardHeader>
-              <CardTitle className="text-lg">Areas of Expertise</CardTitle>
+              <CardTitle className="text-lg text-white">Areas of Expertise</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-2">
                 {expertise.map((item, index) => (
-                  <Badge key={index} variant="outline" className="text-sm">
+                  <Badge key={index} variant="outline" className="text-sm border-orange-400 text-orange-400">
                     {item}
                   </Badge>
                 ))}
@@ -165,18 +165,18 @@ export default function About() {
 
         {/* Freelancing Stats */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-8">Freelancing Experience</h2>
+          <h2 className="text-3xl font-bold text-white mb-8">Freelancing Experience</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
+            <Card className="bg-slate-800 border-slate-700">
               <CardHeader>
-                <CardTitle className="text-lg text-blue-600">Fiverr</CardTitle>
-                <p className="text-slate-600">2019 - Present (5+ years)</p>
+                <CardTitle className="text-lg text-orange-400">Fiverr</CardTitle>
+                <p className="text-slate-400">2019 - Present (5+ years)</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="text-2xl font-bold text-slate-900">80+ Projects Completed</div>
-                  <ul className="space-y-2 text-slate-700">
+                  <div className="text-2xl font-bold text-white">80+ Projects Completed</div>
+                  <ul className="space-y-2 text-slate-300">
                     <li>• Created Engaging Ads Campaigns for Realtors & Lenders</li>
                     <li>• Helped grow e-Commerce businesses on Facebook & Instagram</li>
                     <li>• Optimized YouTube Channels & Blogging Websites</li>
@@ -186,15 +186,15 @@ export default function About() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-slate-800 border-slate-700">
               <CardHeader>
-                <CardTitle className="text-lg text-blue-600">Upwork & Others</CardTitle>
-                <p className="text-slate-600">2019 - Present (5+ years)</p>
+                <CardTitle className="text-lg text-orange-400">Upwork & Others</CardTitle>
+                <p className="text-slate-400">2019 - Present (5+ years)</p>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="text-2xl font-bold text-slate-900">45+ Projects Completed</div>
-                  <ul className="space-y-2 text-slate-700">
+                  <div className="text-2xl font-bold text-white">45+ Projects Completed</div>
+                  <ul className="space-y-2 text-slate-300">
                     <li>• Created Engaging PPC Ads Campaigns for B2B & B2C Industries</li>
                     <li>• Optimized websites & helped ranking top on SERP</li>
                     <li>• Designed & customized Clients eCommerce & Org Websites</li>

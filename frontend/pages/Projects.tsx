@@ -128,12 +128,13 @@ export default function Projects() {
   ];
 
   return (
-    <div className="min-h-screen py-12 px-4">
+    <div className="min-h-screen py-12 px-4 bg-slate-900">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">My Projects</h1>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">Projects</h1>
+          <div className="w-16 h-1 bg-orange-400 mx-auto mb-6"></div>
+          <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
             Explore my portfolio of successful digital marketing campaigns, project management initiatives, 
             and growth strategies that have delivered measurable results for clients across various industries.
           </p>
@@ -141,28 +142,28 @@ export default function Projects() {
 
         {/* Project Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          <Card className="text-center">
+          <Card className="text-center bg-slate-800 border-slate-700">
             <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-blue-600 mb-2">125+</div>
-              <div className="text-slate-600 text-sm">Total Projects</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">125+</div>
+              <div className="text-slate-300 text-sm">Total Projects</div>
             </CardContent>
           </Card>
-          <Card className="text-center">
+          <Card className="text-center bg-slate-800 border-slate-700">
             <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-green-600 mb-2">150%</div>
-              <div className="text-slate-600 text-sm">Avg Lead Increase</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">150%</div>
+              <div className="text-slate-300 text-sm">Avg Lead Increase</div>
             </CardContent>
           </Card>
-          <Card className="text-center">
+          <Card className="text-center bg-slate-800 border-slate-700">
             <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-purple-600 mb-2">250%</div>
-              <div className="text-slate-600 text-sm">Best ROI Achieved</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">250%</div>
+              <div className="text-slate-300 text-sm">Best ROI Achieved</div>
             </CardContent>
           </Card>
-          <Card className="text-center">
+          <Card className="text-center bg-slate-800 border-slate-700">
             <CardContent className="pt-6">
-              <div className="text-3xl font-bold text-orange-600 mb-2">95%+</div>
-              <div className="text-slate-600 text-sm">Client Satisfaction</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">95%+</div>
+              <div className="text-slate-300 text-sm">Client Satisfaction</div>
             </CardContent>
           </Card>
         </div>
@@ -170,20 +171,20 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="space-y-8">
           {projects.map((project, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card key={index} className="hover:shadow-lg transition-shadow bg-slate-800 border-slate-700">
               <CardHeader>
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                   <div className="flex-1">
-                    <CardTitle className="text-xl text-slate-900 mb-2">{project.title}</CardTitle>
-                    <p className="text-blue-600 font-medium mb-2">{project.company}</p>
-                    <p className="text-slate-600 leading-relaxed">{project.description}</p>
+                    <CardTitle className="text-xl text-white mb-2">{project.title}</CardTitle>
+                    <p className="text-orange-400 font-medium mb-2">{project.company}</p>
+                    <p className="text-slate-300 leading-relaxed">{project.description}</p>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <Badge variant="outline" className="w-fit">
+                    <Badge variant="outline" className="w-fit border-orange-400 text-orange-400">
                       <Calendar className="mr-1 h-3 w-3" />
                       {project.period}
                     </Badge>
-                    <Badge variant="secondary" className="w-fit">
+                    <Badge variant="secondary" className="w-fit bg-slate-700 text-slate-300">
                       {project.type}
                     </Badge>
                   </div>
@@ -193,14 +194,14 @@ export default function Projects() {
               <CardContent className="space-y-6">
                 {/* Key Achievements */}
                 <div>
-                  <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
-                    <TrendingUp className="mr-2 h-4 w-4 text-green-500" />
+                  <h4 className="font-semibold text-white mb-3 flex items-center">
+                    <TrendingUp className="mr-2 h-4 w-4 text-orange-400" />
                     Key Achievements
                   </h4>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {project.achievements.map((achievement, i) => (
-                      <li key={i} className="flex items-start text-slate-700">
-                        <span className="mr-2 text-green-500">•</span>
+                      <li key={i} className="flex items-start text-slate-300">
+                        <span className="mr-2 text-orange-400">•</span>
                         {achievement}
                       </li>
                     ))}
@@ -209,12 +210,12 @@ export default function Projects() {
 
                 {/* Metrics */}
                 <div>
-                  <h4 className="font-semibold text-slate-900 mb-3">Key Metrics</h4>
+                  <h4 className="font-semibold text-white mb-3">Key Metrics</h4>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {Object.entries(project.metrics).map(([key, value], i) => (
-                      <div key={i} className="text-center p-3 bg-slate-50 rounded-lg">
-                        <div className="font-bold text-slate-900">{value}</div>
-                        <div className="text-sm text-slate-600">{key}</div>
+                      <div key={i} className="text-center p-3 bg-slate-700 rounded-lg">
+                        <div className="font-bold text-orange-400">{value}</div>
+                        <div className="text-sm text-slate-400">{key}</div>
                       </div>
                     ))}
                   </div>
@@ -222,10 +223,10 @@ export default function Projects() {
 
                 {/* Technologies */}
                 <div>
-                  <h4 className="font-semibold text-slate-900 mb-3">Technologies & Skills</h4>
+                  <h4 className="font-semibold text-white mb-3">Technologies & Skills</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, i) => (
-                      <Badge key={i} variant="outline" className="text-xs">
+                      <Badge key={i} variant="outline" className="text-xs border-slate-600 text-slate-400">
                         {tech}
                       </Badge>
                     ))}
@@ -237,15 +238,15 @@ export default function Projects() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">
+        <div className="mt-16 text-center bg-slate-800 rounded-2xl p-8 border border-slate-700">
+          <h2 className="text-2xl font-bold text-white mb-4">
             Interested in Similar Results?
           </h2>
-          <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+          <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
             Let's discuss how I can help you achieve exceptional growth and efficiency 
             in your digital marketing and project management initiatives.
           </p>
-          <Button size="lg" asChild>
+          <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white" asChild>
             <a href="/contact">
               Start Your Project
               <ExternalLink className="ml-2 h-4 w-4" />

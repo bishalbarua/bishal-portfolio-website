@@ -122,9 +122,12 @@ export default function Home() {
           <div className="mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">About me</h2>
             <p className="text-slate-300 max-w-3xl leading-relaxed">
-              I started my software journey from photography. Through that, I learned to 
-              love the process of creating from scratch. Since then, this has led me to 
-              software development as it fulfills my love for learning and building things.
+              My journey in AI marketing and project management began with a passion for leveraging 
+              cutting-edge technology to solve complex business challenges. Through years of hands-on 
+              experience with AI tools like ChatGPT, Gemini, and ClaudeAI, I've discovered how artificial 
+              intelligence can transform marketing strategies and drive unprecedented growth. This expertise, 
+              combined with strong project management skills, allows me to deliver measurable results 
+              that exceed client expectations.
             </p>
           </div>
 

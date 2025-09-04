@@ -179,7 +179,7 @@ export default function Home() {
       <section className="py-16 bg-slate-800">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Projects</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">My Projects</h2>
             <div className="w-16 h-1 bg-orange-400 mx-auto"></div>
           </div>
           

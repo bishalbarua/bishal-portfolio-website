@@ -2,6 +2,10 @@
 
 A modern, responsive portfolio website built with Encore.ts backend and React frontend, showcasing professional work and providing a contact form for potential clients.
 
+## Website Link (Staging)
+
+https://staging-bishal-portfolio-website-ghri.frontend.encr.app
+
 ## Features
 
 - **Modern Design**: Clean, professional layout with responsive design

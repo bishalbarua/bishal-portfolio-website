@@ -18,7 +18,6 @@ export default function Home() {
 		'PPC',
     'SEO',
     'SMM',
-    'Email Marketing',
     'Content Marketing',
   ];
 

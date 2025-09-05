@@ -59,9 +59,9 @@ export default function Contact() {
     },
     {
       icon: Globe,
-      label: 'Website',
-      value: 'www.bishalbarua.com',
-      link: 'http://www.bishalbarua.com'
+      label: 'Github',
+      value: 'https://github.com/bishalbarua',
+      link: 'https://github.com/bishalbarua'
     },
     {
       icon: ExternalLink,

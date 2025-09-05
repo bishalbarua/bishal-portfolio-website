@@ -58,7 +58,7 @@ export default function Contact() {
       link: 'mailto:baruabishal123@gmail.com'
     },
     {
-      icon: Globe,
+      icon: github,
       label: 'Github',
       value: 'https://github.com/bishalbarua',
       link: 'https://github.com/bishalbarua'

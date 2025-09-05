@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with Encore.ts backend and React frontend, showcasing professional work and providing a contact form for potential clients.
+A modern, responsive portfolio website built with Leap (Encore.ts backend and React frontend), showcasing professional work and providing a contact form for potential clients.
 
 ## Website Link (Staging)
 

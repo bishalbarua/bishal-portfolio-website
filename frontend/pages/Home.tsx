@@ -64,7 +64,7 @@ export default function Home() {
                   </h2>
                 </div>
                 <h3 className="text-3xl lg:text-5xl font-bold text-white">
-                   AI-Driven Marketing Expert | Project Manager
+                   AI-Driven Marketer | Project Manager
                 </h3>
                 <p className="text-lg text-slate-300 leading-relaxed">
                   AI-Driven Project and Digital Marketing Manager with extensive experience 

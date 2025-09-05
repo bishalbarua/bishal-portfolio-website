@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, Code, Monitor, Server, ExternalLink, Calendar } from 'lucide-react';
+import { ArrowRight, Mail, Code, Monitor, Server, ExternalLink, Calendar, ShoppingCart, Target, Bot } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -45,21 +45,21 @@ export default function Home() {
       description: 'AI-powered marketing strategy that increased conversion rates by 40% for a retail client.',
       category: 'Digital Marketing',
       date: '2024',
-      image: '/api/placeholder/300/200'
+      icon: ShoppingCart
     },
     {
       title: 'SaaS Lead Generation',
       description: 'Comprehensive PPC and SEO campaign generating 300+ qualified leads monthly.',
       category: 'Lead Generation',
       date: '2024',
-      image: '/api/placeholder/300/200'
+      icon: Target
     },
     {
       title: 'Brand Automation System',
       description: 'Implemented AI workflows reducing manual marketing tasks by 60%.',
       category: 'AI Automation',
       date: '2023',
-      image: '/api/placeholder/300/200'
+      icon: Bot
     }
   ];
 
@@ -228,9 +228,15 @@ export default function Home() {
             {featuredProjects.map((project, index) => (
               <Link key={index} to="/projects" className="group">
                 <Card className="bg-slate-700 border-slate-600 hover:border-orange-400 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-400/20">
-                  <div className="aspect-video bg-gradient-to-br from-slate-600 to-slate-700 rounded-t-lg flex items-center justify-center">
-                    <div className="text-slate-400 text-4xl">
-                      <Monitor className="h-12 w-12" />
+                  <div className="aspect-video bg-gradient-to-br from-slate-600 to-slate-700 rounded-t-lg flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-orange-600/20"></div>
+                    <div className="relative z-10 flex items-center justify-center">
+                      <div className="w-16 h-16 bg-orange-400/30 rounded-full flex items-center justify-center backdrop-blur-sm">
+                        <project.icon className="h-8 w-8 text-orange-400" />
+                      </div>
+                    </div>
+                    <div className="absolute top-4 right-4 w-8 h-8 bg-slate-800/50 rounded-full flex items-center justify-center backdrop-blur-sm">
+                      <ExternalLink className="h-4 w-4 text-orange-400" />
                     </div>
                   </div>
                   <CardHeader className="pb-3">

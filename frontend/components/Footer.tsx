@@ -1,4 +1,4 @@
-import { Mail, ExternalLink, Heart, linkedin } from 'lucide-react';
+import { Mail, ExternalLink, Heart } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,7 +12,7 @@ export default function Footer() {
     {
       name: 'LinkedIn',
       href: 'https://www.linkedin.com/in/bishalbarua/',
-      icon: linkedin
+      icon: ExternalLink
     },
     {
       name: 'Fiverr',

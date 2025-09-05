@@ -1,7 +1,7 @@
-import { ArrowRight, Mail, Code, Monitor, Server } from 'lucide-react';
+import { ArrowRight, Mail, Code, Monitor, Server, ExternalLink, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function Home() {
   const skills = [
@@ -36,6 +36,30 @@ export default function Home() {
       icon: Monitor,
       title: 'Project Management',
       description: 'Leading cross-functional teams to deliver complex projects on time and under budget.'
+    }
+  ];
+
+  const featuredProjects = [
+    {
+      title: 'E-commerce Growth Campaign',
+      description: 'AI-powered marketing strategy that increased conversion rates by 40% for a retail client.',
+      category: 'Digital Marketing',
+      date: '2024',
+      image: '/api/placeholder/300/200'
+    },
+    {
+      title: 'SaaS Lead Generation',
+      description: 'Comprehensive PPC and SEO campaign generating 300+ qualified leads monthly.',
+      category: 'Lead Generation',
+      date: '2024',
+      image: '/api/placeholder/300/200'
+    },
+    {
+      title: 'Brand Automation System',
+      description: 'Implemented AI workflows reducing manual marketing tasks by 60%.',
+      category: 'AI Automation',
+      date: '2023',
+      image: '/api/placeholder/300/200'
     }
   ];
 
@@ -192,10 +216,51 @@ export default function Home() {
       <section className="py-16 bg-slate-800">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">My Projects</h2>
-            <div className="w-16 h-1 bg-orange-400 mx-auto"></div>
+            <h2 className="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+            <div className="w-16 h-1 bg-orange-400 mx-auto mb-6"></div>
+            <p className="text-slate-300 max-w-2xl mx-auto">
+              Here are some of my recent successful projects that showcase my expertise in AI marketing and project management.
+            </p>
           </div>
           
+          {/* Project Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {featuredProjects.map((project, index) => (
+              <Link key={index} to="/projects" className="group">
+                <Card className="bg-slate-700 border-slate-600 hover:border-orange-400 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-400/20">
+                  <div className="aspect-video bg-gradient-to-br from-slate-600 to-slate-700 rounded-t-lg flex items-center justify-center">
+                    <div className="text-slate-400 text-4xl">
+                      <Monitor className="h-12 w-12" />
+                    </div>
+                  </div>
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs font-medium text-orange-400 bg-orange-400/20 px-2 py-1 rounded-full">
+                        {project.category}
+                      </span>
+                      <div className="flex items-center text-xs text-slate-400">
+                        <Calendar className="h-3 w-3 mr-1" />
+                        {project.date}
+                      </div>
+                    </div>
+                    <CardTitle className="text-lg text-white group-hover:text-orange-400 transition-colors">
+                      {project.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-slate-300 text-sm mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
+                    <div className="flex items-center text-orange-400 text-sm font-medium group-hover:underline">
+                      View Details
+                      <ExternalLink className="h-3 w-3 ml-1" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+
           <div className="text-center">
             <Link to="/projects">
               <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white">

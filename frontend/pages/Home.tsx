@@ -14,13 +14,12 @@ export default function Home() {
   ];
 
   const techStack = [
-    'HTML5',
-    'CSS',
-    'JavaScript',
-    'Node.js',
-    'React',
-    'Git',
-    'GitHub'
+    'AI Automation',
+		'PPC',
+    'SEO',
+    'SMM',
+    'Email Marketing',
+    'Content Marketing',
   ];
 
   const services = [

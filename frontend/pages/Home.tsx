@@ -100,14 +100,12 @@ export default function Home() {
             <div className="lg:flex justify-center hidden">
               <div className="relative">
                 <div className="w-80 h-80 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
-                  <div className="w-72 h-72 bg-slate-800 rounded-full flex items-center justify-center border-4 border-slate-700">
-                    <div className="text-center">
-                      <div className="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-2xl font-bold text-white">BB</span>
-                      </div>
-                      <h3 className="text-xl font-bold text-white">Bishal Barua</h3>
-                      <p className="text-slate-400">Marketing Expert</p>
-                    </div>
+                  <div className="w-72 h-72 bg-slate-800 rounded-full flex items-center justify-center border-4 border-slate-700 overflow-hidden">
+                    <img 
+                      src="/professional-headshot.jpg" 
+                      alt="Bishal Barua - AI Marketing Expert"
+                      className="w-full h-full object-cover rounded-full"
+                    />
                   </div>
                 </div>
               </div>

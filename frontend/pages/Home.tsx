@@ -103,7 +103,7 @@ export default function Home() {
                   </Button>
                 </Link>
                 <Link to="/about">
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white">
                     My resume
                   </Button>
                 </Link>

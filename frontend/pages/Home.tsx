@@ -102,7 +102,7 @@ export default function Home() {
                 <div className="w-80 h-80 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-2xl p-1">
                   <div className="w-full h-full bg-slate-800 rounded-full overflow-hidden">
                     <img 
-                      src="https://pub-1277c2d77088423f8d767164d82bd4d6.r2.dev/Bishal-Linkedin.png?w=400&h=400&fit=crop&crop=face&auto=format&q=80" 
+                      src="https://pub-1277c2d77088423f8d767164d82bd4d6.r2.dev/Bishal-Linkedin.png?w=400&h=400&fit=crop&crop=face,top&auto=format&q=80" 
                       alt="Bishal Barua - AI Marketing Expert"
                       className="w-full h-full object-cover"
                       onError={(e) => {

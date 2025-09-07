@@ -2,6 +2,7 @@ import { ArrowRight, Mail, Code, Monitor, Server, ExternalLink, Calendar, Shoppi
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { AnimatedText } from '@/components/ui/animated-text';
 
 export default function Home() {
   const skills = [
@@ -83,9 +84,16 @@ export default function Home() {
                   Hello<span className="text-orange-400">.</span>
                 </h1>
                 <div className="border-l-4 border-orange-400 pl-4">
-                  <h2 className="text-2xl lg:text-3xl text-white font-medium">
-                    I'm Bishal
-                  </h2>
+                  <AnimatedText 
+                    text="I'm Bishal"
+                    textClassName="text-2xl lg:text-3xl text-white font-medium"
+                    underlineGradient="from-orange-400 via-orange-500 to-orange-600"
+                    underlineHeight="h-1"
+                    underlineOffset="-bottom-1"
+                    className="justify-start items-start"
+                    duration={0.05}
+                    delay={0.08}
+                  />
                 </div>
                 <h3 className="text-3xl lg:text-5xl font-bold text-white">
                    AI Marketer | Project Manager
